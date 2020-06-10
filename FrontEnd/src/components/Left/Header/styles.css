@@ -1,0 +1,9 @@
+.headerleft_title::before {
+    content: url('../../../assets/Images/shape2.png');
+   
+
+}
+.headerleft_title::after {
+    content: url('../../../assets/Images/shape1.png');
+   
+}

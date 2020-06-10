@@ -7,7 +7,7 @@ import './styles.css';
 
 // == Composant
 const FooterLeft = () => (
-<div>
+<div className='row justify-content-center'>
     "FooterLeft"
 </div>
     );
