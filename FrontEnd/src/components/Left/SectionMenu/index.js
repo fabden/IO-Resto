@@ -7,7 +7,7 @@ import './styles.css';
 
 // == Composant
 const SectionMenu = () => (
-<div>
+<div className="row justify-content-center">
     "SectionDescriptionLeft"
 </div>
     );
