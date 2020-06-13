@@ -26,6 +26,8 @@ app.use((req, res, next) => {
 
   app.use(bodyParser.urlencoded());
 
+  //route
+  
   app.post('/user', (req, res,) => {
 
     console.log(req.body);
