@@ -24,9 +24,16 @@ app.use((req, res, next) => {
 
 //body-parser 
 
-  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded());
 
+  app.post('/user', (req, res,) => {
 
+    console.log(req.body);
+    res.status(201).json({
+      message: 'Objet créé !'
+    });
+
+  });
 
 
 //export module 
