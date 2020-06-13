@@ -28,7 +28,6 @@
     "cssnano": "*",
     "enzyme": "*",
     "enzyme-adapter-react-16": "*",
-    "eslint": "*",
     "eslint-config-airbnb": "*",
     "eslint-import-resolver-alias": "*",
     "eslint-plugin-import": "*",
