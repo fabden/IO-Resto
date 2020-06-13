@@ -1,9 +1,19 @@
-.app {
-  width: 500px;
-  margin: 1em auto;
-  text-align: center;
+@font-face{
+  font-family: 'Anton-Regular';
+  src: url('../../assets/fonts/Anton-Regular.ttf');
 }
 
-.app img {
-  max-width: 150px;
+body {
+  font-family: 'Anton-Regular';
 }
+
+.sectionLeft{
+background-image: url('../../assets/Images/fondGauche.jpg') ;
+}
+
+.sectionRight{
+  background-image: url('../../assets/Images/fondDroite.jpg');
+}
+
+/* import boostrap */
+@import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
