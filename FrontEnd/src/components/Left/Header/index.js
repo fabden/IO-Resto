@@ -1,6 +1,7 @@
 // == Import npm
 import React from 'react';
 
+
 // == Import
 
 import './styles.css';
@@ -8,9 +9,11 @@ import './styles.css';
 // == Composant
 const HeaderLeft = () => (
   <section className="row justify-content-center">
-    <div className="img-thumbnail col-12"> </div>
-    <div className="row">
-      <div className=" display-4 headerleft_title ">BURGER</div>
+    <div className="col-12 text-center my-5">
+      <img className="header_picture "></img>
+    </div>
+    <div className="row justify-content-center">      
+      <div className=" display-4 col-12 text-center">BURGER</div>
     </div>
   </section>
 );

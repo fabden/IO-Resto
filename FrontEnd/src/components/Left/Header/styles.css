@@ -1,9 +1,6 @@
-.headerleft_title::before {
-    content: url('../../../assets/Images/shape2.png');
-   
+.header_picture{
+    content: url('../../../assets/Images/burger.png');
+    width: 50%;
+    height: auto;
 
-}
-.headerleft_title::after {
-    content: url('../../../assets/Images/shape1.png');
-   
 }
