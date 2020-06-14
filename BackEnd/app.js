@@ -2,8 +2,14 @@
 const express =require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
 const app=express();
+
+//import route
+
+const MenuRoute = require('./Route/MenuRoute');
+const OrdersRoute = require('./Route/OrdersRoute');
+const UserRoute = require('./Route/UserRoute');
+
 
 //== connection base de donnee
 
@@ -25,17 +31,14 @@ app.use((req, res, next) => {
 //body-parser 
 
   app.use(bodyParser.urlencoded());
-
-  //route
+  app.use(bodyParser.json());
   
-  app.post('/user', (req, res,) => {
 
-    console.log(req.body);
-    res.status(201).json({
-      message: 'Objet créé !'
-    });
-
-  });
+//route
+  
+app.use('/menu', MenuRoute);
+app.use('/order', OrdersRoute);
+app.use('/user', UserRoute);
 
 
 //export module 
