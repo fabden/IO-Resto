@@ -7,6 +7,8 @@ const app=express();
 //import route
 
 const MenuRoute = require('./Route/MenuRoute');
+const OrdersRoute = require('./Route/OrdersRoute');
+const UserRoute = require('./Route/UserRoute');
 
 
 //== connection base de donnee
@@ -29,10 +31,14 @@ app.use((req, res, next) => {
 //body-parser 
 
   app.use(bodyParser.urlencoded());
+  app.use(bodyParser.json());
+  
 
-  //route
+//route
   
 app.use('/menu', MenuRoute);
+app.use('/order', OrdersRoute);
+app.use('/user', UserRoute);
 
 
 //export module 

@@ -2,14 +2,15 @@
 
 const express = require('express');
 const { Router } = require('express');
-const router = express.Router();
+const MenuRouter = express.Router();
 
-router
-    .route('/')
-    .get((req, res) => {console.log("chemin get ")})
-    .post((req, res) => {console.log("chemin post ")})
-    .delete((req, res) => {console.log("chemin delete ")})
+//route
+
+MenuRouter.route('/')
+    .get((req, res) => {console.log("chemin get menu ")})
+    .post((req, res) => {console.log("chemin post menu ")})
+    .delete((req, res) => {console.log("chemin delete  menu")})
    
 
 
-module.exports = router;
+module.exports = MenuRouter;
