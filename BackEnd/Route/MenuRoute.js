@@ -1,7 +1,6 @@
 // import
 const express = require('express');
 
-
 const MenuRouter = express.Router();
 
 // route

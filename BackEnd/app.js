@@ -11,7 +11,7 @@ const MenuRoute = require('./Route/MenuRoute');
 const OrdersRoute = require('./Route/OrdersRoute');
 const UserRoute = require('./Route/UserRoute');
 
-//= = connection base de donnee
+// connection base de donnee
 
 mongoose.connect('mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false',
   {
