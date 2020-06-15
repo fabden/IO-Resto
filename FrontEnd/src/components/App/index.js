@@ -18,13 +18,13 @@ import FooterLeft from '../Left/Footer';
 // == Composant
 const App = () => (
   <div className="container">
-    <div className="row ">
-      <section className="col-md-6 col-12 order-1 bg-success sectionLeft">
+    <div className="row " >
+      <section className="col-md-6 col-12 order-1 sectionLeft">
         <HeaderLeft />
         <SectionMenu />
         <FooterLeft />
       </section>
-      <section className="col-md-6 col-12 order-md-2 bg-warning sectionRight">
+      <section className="col-md-6 col-12 order-md-2 sectionRight">
         <HeaderRight />
         <SectionDescritptionRight />
         <FooterRight />
