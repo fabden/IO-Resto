@@ -1,5 +1,6 @@
 // == Import npm
 import React from 'react';
+import 'bootstrap';
 
 // == Import css
 import './styles.css';
@@ -13,11 +14,13 @@ import FooterRight from '../Right/Footer';
 import HeaderLeft from '../Left/Header';
 import SectionMenu from '../Left/SectionMenu';
 import FooterLeft from '../Left/Footer';
+import Connection from '../Modal/Connection';
 
 
 // == Composant
 const App = () => (
   <div className="container">
+    <Connection></Connection>
     <div className="row " >
       <section className="col-md-6 col-12 order-1 sectionLeft">
         <HeaderLeft />
