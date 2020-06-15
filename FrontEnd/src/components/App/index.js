@@ -1,6 +1,5 @@
 // == Import npm
 import React from 'react';
-import 'bootstrap';
 
 // == Import css
 import './styles.css';

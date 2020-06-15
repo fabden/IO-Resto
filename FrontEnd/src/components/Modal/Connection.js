@@ -10,9 +10,33 @@ import './styles.css';
 
 // == Composant
 const Connection = () => (
-<>
-ljhjhk
-</>
+
+<div>
+    <div className='row justify-content-center'>
+        <div className='text-center col-12'>
+            <input className='col-4'></input>
+        </div>
+    </div>
+    <div className='row justify-content-center'>
+        <div className='text-center col-12'>
+            <input className='col-4'></input>
+        </div>
+    </div>
+    <div className='row justify-content-center'>
+        <div className='text-center col-12'>
+            <input className='col-4'></input>
+        </div>
+    </div>
+    <div className='row justify-content-center'>
+        <div className='text-center col-12'>
+            <input className='col-4'></input>
+        </div>
+    </div>
+
+
+
+</div>
+
 );
 
 // == Export
