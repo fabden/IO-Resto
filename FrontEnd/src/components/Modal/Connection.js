@@ -16,8 +16,8 @@ const Connection = () => (
             <label for="lname">Mots de passe:</label>
         </div>
         <div className='col-7 '>
-            <input type="text" id="fname" name="fname" />
-            <input type="text" id="lname" name="lname" />
+            <input type="text" id="fname" name="fname " />
+            <input type="text" id="lname" name="lname " />
         </div>     
     </form>
     <input type="submit" value="Connection" />

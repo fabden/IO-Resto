@@ -14,12 +14,14 @@ import HeaderLeft from '../Left/Header';
 import SectionMenu from '../Left/SectionMenu';
 import FooterLeft from '../Left/Footer';
 import Connection from '../Modal/Connection';
+import Inscription from '../Modal/Inscription';
 
 
 // == Composant
 const App = () => (
   <div className="container">
     <Connection></Connection>
+    <Inscription></Inscription>
     <div className="row " >
       <section className="col-md-6 col-12 order-1 sectionLeft">
         <HeaderLeft />
