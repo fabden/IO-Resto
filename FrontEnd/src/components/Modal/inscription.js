@@ -10,7 +10,7 @@ import './styles.css';
 const Inscription = () => (
 
 <div className='row justify-content-center'>
-    <form className='row m-2'>
+    <form className='row m-2 justify-content-center'>
         <div className='col-4  '>
             <label form="fname">Nom :</label><br />
             <label form="lname">Prenom :</label><br />
@@ -27,9 +27,10 @@ const Inscription = () => (
             <input type="text" id="lname" name="lname " /><br />
             <input type="text" id="lname" name="lname " />
             <input type="text" id="lname" name="lname " />
-        </div>     
+        </div> 
+        <input type="submit" value="Inscription" />   
     </form>
-    <input type="submit" value="Inscription" />
+    
 </div>
 
 );
