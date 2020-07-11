@@ -13,7 +13,7 @@ const UserRoute = require('./Route/UserRoute');
 
 // connection base de donnee
 
-mongoose.connect('mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false',
+mongoose.connect('mongodb://localhost:27017/io-resto',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
