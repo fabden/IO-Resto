@@ -4,11 +4,17 @@ const express = require('express');
 
 const OrderRouter = express.Router();
 
+// import controler
+
+const OrderControleur = require('../Controler/OrderControler');
+
 // route
 
 OrderRouter.route('/')
-  .get((req, res) => { console.log('chemin get order '); })
-  .post((req, res) => { console.log('chemin post order'); })
-  .delete((req, res) => { console.log('chemin delete order'); });
+  .get(OrderControleur.getOrder)
+  .post(OrderControleur.postOrder);
+
+OrderRouter.route('/:id')
+  .delete(OrderControleur.deleteOrder);
 
 module.exports = OrderRouter;

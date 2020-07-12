@@ -4,11 +4,17 @@ const express = require('express');
 
 const UserRoute = express.Router();
 
+// import controleur
+
+const ControleurUsers = require('../Controler/UserControler');
+
 // route
 
 UserRoute.route('/')
-  .get((req, res) => { console.log('chemin get user'); })
-  .post((req, res) => { console.log('chemin post user'); })
-  .delete((req, res) => { console.log('chemin delete user'); });
+  .get(ControleurUsers.getUsers)
+  .post(ControleurUsers.postUsers);
+
+UserRoute.route('/:id')
+  .delete(ControleurUsers.deleteUsers);
 
 module.exports = UserRoute;

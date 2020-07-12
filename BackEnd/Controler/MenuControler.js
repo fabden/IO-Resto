@@ -4,9 +4,8 @@ const Menus = require('../Models/MenusModel');
 
 // get menus
 
-exports.getMenu = (req, res, next) => {
+exports.getMenu = (req, res) => {
   Menus.find()
-    .exec()
     .then((docs) => {
       res.status(200).json(docs);
     })
@@ -15,7 +14,7 @@ exports.getMenu = (req, res, next) => {
 
 // post menus
 
-exports.postMenu = (req, res, next) => {
+exports.postMenu = (req, res) => {
   const MenusItem = new Menus({
     category: req.body.category,
     description: req.body.description,

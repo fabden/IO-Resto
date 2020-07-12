@@ -12,6 +12,7 @@ MenuRouter.route('/')
   .get(MenuControler.getMenu)
   .post(MenuControler.postMenu);
 
-MenuRouter.route('/:id').delete(MenuControler.deleteMenu);
+MenuRouter.route('/:id')
+  .delete(MenuControler.deleteMenu);
 
 module.exports = MenuRouter;
