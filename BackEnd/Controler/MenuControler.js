@@ -31,7 +31,7 @@ exports.postMenu = (req, res, next) => {
 
 // delete menu
 
-exports.deleteMenu = (req, res, next) => {
+exports.deleteMenu = (req, res) => {
   console.log(req.params.id);
   res.status(200).json(req.params.id);
   Menus.remove({ _id: req.params.id }).exec().then().catch();
