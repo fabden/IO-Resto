@@ -17,4 +17,7 @@ UserRoute.route('/')
 UserRoute.route('/:id')
   .delete(ControleurUsers.deleteUsers);
 
+UserRoute.route('/login')
+  .post(ControleurUsers.loginUser);
+
 module.exports = UserRoute;

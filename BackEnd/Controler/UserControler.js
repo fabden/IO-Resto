@@ -1,6 +1,7 @@
 // import models base de donnee
 
 const bcrypt = require('bcrypt');
+const { json } = require('body-parser');
 const Users = require('../Models/UsersModel');
 
 // import Bcrypt Hash password
@@ -45,4 +46,22 @@ exports.deleteUsers = (req, res) => {
   Users.deleteOne({ _id: req.params.id })
     .then((docs) => { res.status(200).json(docs); })
     .catch((err) => console.log(err.message));
+};
+
+// login user
+
+exports.loginUser = (req, res) => {
+  Users.find({ phoneNumber: req.body.phoneNumber })
+    .then((user) => {
+      if (user.length < 1) {
+        return res.status(200).json('user no exit');
+      }
+      bcrypt.compare(req.body.password, user[0].password, (err, resul) => {
+        if (resul) {
+          return res.status(200).json('user OK');
+        }
+        return res.status(401).json('user non OK');
+      });
+    })
+    .catch(res.status(401));
 };
