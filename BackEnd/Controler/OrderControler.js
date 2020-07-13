@@ -2,17 +2,15 @@
 
 const Orders = require('../Models/OdersModel');
 
-// get menus
+// get Order
 
 exports.getOrder = (req, res) => {
   Orders.find()
-    .then((docs) => {
-      res.status(200).json(docs);
-    })
-    .catch((err) => console.log(err));
+    .then((docs) => { res.status(200).json(docs); })
+    .catch((err) => console.log(err.message));
 };
 
-// post menus
+// post Order
 
 exports.postOrder = (req, res) => {
   const OrdersItem = new Orders({
@@ -20,14 +18,14 @@ exports.postOrder = (req, res) => {
   });
 
   OrdersItem.save()
-    .then(() => { res.status(201).json(req.body); })
-    .catch((err) => console.log(err));
+    .then((docs) => { res.status(200).json(docs); })
+    .catch((err) => console.log(err.message));
 };
 
-// delete menu
+// delete Order
 
 exports.deleteOrder = (req, res) => {
-  console.log(req.params.id);
-  res.status(200).json(req.params.id);
-  Orders.remove({ _id: req.params.id }).then().catch();
+  Orders.remove({ _id: req.params.id })
+    .then((docs) => { res.status(200).json(docs); })
+    .catch((err) => console.log(err.message));
 };

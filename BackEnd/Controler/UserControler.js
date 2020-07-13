@@ -2,17 +2,15 @@
 
 const Users = require('../Models/UsersModel');
 
-// get menus
+// get User
 
 exports.getUsers = (req, res) => {
   Users.find()
-    .then((docs) => {
-      res.status(200).json(docs);
-    })
-    .catch((err) => console.log(err));
+    .then((docs) => { res.status(200).json(docs); })
+    .catch((err) => console.log(err.message));
 };
 
-// post menus
+// post User
 
 exports.postUsers = (req, res) => {
   const usersItem = new Users(
@@ -26,14 +24,15 @@ exports.postUsers = (req, res) => {
   );
 
   usersItem.save()
-    .then(() => { res.status(201).json(req.body); })
-    .catch((err) => console.log(err));
+    .then((docs) => { res.status(200).json(docs); })
+    .catch((err) => console.log(err.message));
 };
 
-// delete menu
+// delete User
 
 exports.deleteUsers = (req, res) => {
-  console.log(req.params.id);
   res.status(200).json(req.params.id);
-  Users.deleteOne({ _id: req.params.id }).exec().then().catch();
+  Users.deleteOne({ _id: req.params.id })
+    .then((docs) => { res.status(200).json(docs); })
+    .catch((err) => console.log(err.message));
 };
