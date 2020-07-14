@@ -6,9 +6,7 @@ const Menus = require('../Models/MenusModel');
 
 exports.getMenu = (req, res) => {
   Menus.find()
-    .then((docs) => {
-      res.status(200).json(docs);
-    })
+    .then((docs) => { res.status(200).json(docs); })
     .catch((err) => console.log(err));
 };
 
@@ -24,14 +22,14 @@ exports.postMenu = (req, res) => {
   });
 
   MenusItem.save()
-    .then(() => { res.status(201).json(req.body); })
-    .catch();
+    .then((doc) => { res.status(201).json(doc); })
+    .catch((err) => console.log(err));
 };
 
 // delete menu
 
 exports.deleteMenu = (req, res) => {
-  console.log(req.params.id);
-  res.status(200).json(req.params.id);
-  Menus.remove({ _id: req.params.id }).exec().then().catch();
+  Menus.remove({ _id: req.params.id })
+    .then((docs) => { res.status(200).json(docs); })
+    .catch((err) => console.log(err));
 };
