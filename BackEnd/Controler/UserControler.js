@@ -1,10 +1,8 @@
 // import models base de donnee
-
-const bcrypt = require('bcrypt');
-const { json } = require('body-parser');
-const Users = require('../Models/UsersModel');
-
 // import Bcrypt Hash password
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const Users = require('../Models/UsersModel');
 
 // get User
 
@@ -58,7 +56,13 @@ exports.loginUser = (req, res) => {
       }
       bcrypt.compare(req.body.password, user[0].password, (err, resul) => {
         if (resul) {
-          return res.status(200).json('user OK');
+          const token = jwt.sign({
+            message: 'hello fab ',
+          }, 'token', {
+            expiresIn: '1m',
+          });
+
+          return res.status(200).json({ mon: 'fab', tokenkey: token });
         }
         return res.status(401).json('user non OK');
       });
