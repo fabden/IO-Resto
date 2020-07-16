@@ -6,6 +6,7 @@ const Menus = require('../Models/MenusModel');
 
 exports.getMenu = (req, res) => {
   Menus.find()
+    .exec()
     .then((docs) => { res.status(200).json(docs); })
     .catch((err) => console.log(err));
 };
